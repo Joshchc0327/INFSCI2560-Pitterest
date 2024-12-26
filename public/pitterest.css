@@ -1,0 +1,429 @@
+
+/* styles.css */
+body {
+    background-color: #f8f8f8;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+a {
+    color: #4F709C;
+    /*#silver*/
+    text-decoration: none;
+}
+
+a:hover {
+    color: #6E7783;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer {
+  color: #F8FAFD;  /*#6E7783 f0f0f0 F8FAFD*/
+  background-color: #DEE2EC; /*a3b0cc D9D4CF c7ccdb*/
+  position: static; /*static absolute*/
+  bottom: 0;
+  width: 100%;
+  height: 1.5rem;            /* Footer height */
+  text-align: center;
+}
+
+.footer-style {
+  background: linear-gradient(to right, #A1A9FE 0%, #8DECB4 100%);
+}
+
+
+/*---- Navbar-----*/
+.navbar {
+    padding: 0.5rem 1rem;
+    /* Adjust padding to your preference */
+}
+
+.navi-bar {
+    background-color: #D9D4CF;
+    /*ffffff*/
+    display: flex;
+    padding: 10px 24px 10px 24px;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+/* This applies to all nav items under the .navbar-nav class */
+.navbar-nav .nav-item {
+    padding: 0.5rem 1rem;
+    /* Adjust padding to your preference */
+}
+
+.nav-link {
+    color: #9B8281;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0 0 15px;
+
+    /* Adjust padding to your preference */
+}
+
+a.navi-btn {
+    color: #383A3F;
+    display: flex;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 100%;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    transition: 500ms;
+    margin: 0 0 0 15px;
+}
+
+a.navi-btn:hover {
+    color: #ffffff; /*#6E7783*/
+    box-shadow: 0 0 10px #7f9eb2;
+    background: linear-gradient(to right, #A1A9FE 0%, #8DECB4 100%);
+    border: none;
+}
+
+.justify-content-end {
+    padding: 10px 20px;
+}
+
+/* Ensures the navbar-brand is aligned to the left */
+.navbar-brand {
+    margin-right: 1rem;
+    /* Adds some margin to the right of the brand */
+}
+
+/*--- Jumbotron ---*/
+
+.jumbotron {
+    margin: 0px 0 20px 0;
+    background: linear-gradient(to right, #A1A9FE 0%, #8DECB4 100%); /*eeaeca 94bbe9*/
+}
+
+.jumbotron h2{
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.jumbotron-sub {
+    margin: 20px 0 20px 0;
+    background: linear-gradient(to right, #A1A9FE 0%, #8DECB4 100%);
+    min-height: 100px;
+    border: none;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.jumbotron-sub h2{
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+#dash-outer-container{
+  display: flex;
+  justify-content:center;
+}
+
+#data-article{
+  display: flex;
+  align-items: center;
+}
+
+/* .row {
+    display: flex;
+  width:90%;
+  justify-content:center;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+} */
+.row {
+    display: flex;
+    justify-content: space-between; /* This will space out your items */
+    flex-wrap: wrap; /* This will allow items to wrap to the next line */
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col {
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 1;
+    /* This will make each .col grow equally */
+    max-width: 100%;
+    /* You can change this for different column sizes */
+}
+
+#data-container {
+    width: 100%;
+    display: flex;
+    /* This will stack items vertically */
+    align-items: center;
+    justify-content:center;
+    /* This will center them horizontally */
+    padding: 20px;
+}
+
+
+/* .data-item {
+    background-color: #ffffff;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(20% - 40px);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+
+.data-item {
+    background-color: #ffffff;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(20% - 40px); /* Adjust or remove calc() as needed */
+    margin: 0 0 20px 0; /* Equal horizontal and bottom margin */
+    min-height: 150px; /* Or any height that suits your content */
+    min-width: 180px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.data-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.data-item h2 {
+    font-size: 1rem;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+}
+
+.data-item p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+
+/* Additional styles to center the form */
+#post-create-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    /* Adjust as necessary for spacing */
+}
+
+#post-create-form input,
+#post-create-form button {
+    margin: 5px;
+    /* Spacing between form elements */
+}
+
+#post-update-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    /* Adjust as necessary for spacing */
+}
+
+#post-update-form input,
+#post-update-form button {
+    margin: 5px;
+    /* Spacing between form elements */
+}
+
+
+
+/*---- Post CSS-----*/
+
+#pin-container {
+    padding: 4px;
+}
+
+/* .pin {
+    margin: 4px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    display: inline;
+    justify-items: center;
+    height: fit-content;
+} */
+
+.pin {
+    margin: 4px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex; /* Changed from inline to flex */
+    justify-content: center; /* Added for horizontal alignment */
+    align-items: center; /* Added for vertical alignment */
+    height: fit-content;
+    width: 100%; /* Ensures the element spans the full width of its parent */
+}
+
+.pin img {
+    width: 100%;
+    display: block;
+    /*border-radius: 8px 8px 0 0;*/
+    border-radius: 2px;
+    padding: 10px 0 2px 0;
+}
+
+.pin-body {
+    padding: 8px;
+}
+
+.data-item-link {
+    display: block;
+    text-decoration: none;
+    /* Optional: Removes underline from all links */
+    color: inherit;
+    /* Optional: Ensures the text color is inherited from the parent */
+}
+
+/*---- Create/Edit Post/Profile-----*/
+
+.post-container {
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd5d0;
+    padding: 50px;
+    border-radius: 12px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.title-text {
+    color: #6E7783;
+    font-weight: bold;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 40px 0;
+}
+
+.upload-area {
+    border: 2px dashed #cccccc;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+.upload-area button {
+    width: 100%;
+}
+
+
+.form-post {
+    border-spacing: 3px;
+}
+
+.form-group {
+    width: 80%;
+}
+
+
+.form-control {
+    border-radius: 8px;
+}
+
+.tag-item {
+    display: inline-block;
+    background: #e1e1e1;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 0.8em;
+}
+
+
+/* --- Edit --- */
+.current-image-area {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.current-image-area img {
+    max-width: 100%;
+    height: auto;
+}
+
+.update-image-icon {
+    margin-top: 10px;
+}
+
+.input-tips {
+    font-size: 0.9em;
+    color: #555555;
+    margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .data-item {
+        flex: 0 0 calc(25% - 40px);
+    }
+}
+
+@media (max-width: 900px) {
+    .data-item {
+        flex: 0 0 calc(33.333% - 40px);
+    }
+}
+
+@media (max-width: 600px) {
+    .data-item {
+        flex: 0 0 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 400px) {
+    .data-item {
+        flex: 0 0 100%;
+    }
+}
+
+/* 
+@media (min-width: 768px) {
+    .col-md {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    #add-data-form {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+} */

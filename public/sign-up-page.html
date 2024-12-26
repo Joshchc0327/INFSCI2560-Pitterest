@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login-page.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"><a href="/">Pitterest</a></div>
+        <nav>
+          <ul>
+            <li><a href="#dashboard">My Dashboard</a></li>
+            <li id="sign-in-btn"><a href="/login-page">Sign In</a></li>
+            <li id="sign-out-btn" style="display:none"><a href="#">Sign Out</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="login-main">
+        <div class="left-board">
+          <section class="signup-section">
+            <h2>Join Us to EXPLORE PITT</h2>
+          </section>
+        </div>
+        <div class="right-board">
+          <section class="login-section">
+            <h2 style="padding:20px">Login to Your Account</h2>
+            <form id="login-form">
+              <div id="name-inputs">
+                <input type="text" id="firstname" name="firstname" placeholder="First name" />
+                <input type="text" id="lastname" name="lastname" placeholder="Last name" style="margin-left:0.5rem" />
+              </div>
+              <input type="email" id="email" name="email" placeholder="Email" />
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+              />
+              <input
+                type="password"
+                id="re-password"
+                name="password"
+                placeholder="Password"
+              />
+              <button type="submit" id="sign-up-btn">Sign-up</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="sign-up-page.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

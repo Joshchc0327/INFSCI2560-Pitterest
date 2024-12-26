@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Pitterest!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="pitterest.css">
+</head>
+
+<body id="main">
+    <header>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md bg-light navbar-light ">
+                <h1><a class="navbar-brand" href="/">Pitterest</a></h1>
+            
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <div class="navbar-nav navbar-right">
+                        <a class="nav-link" id="hello-message"></a>
+                        <a class="navi-btn" href="/post-create.html" style="display:none" id="landing-reco-btn">Recommend</a>
+                        <a class="nav-link" href="/pitterest-dashboard.html" style="display:none" id="landing-dash-btn">My Dashboard</a>
+<!--                         <a class="nav-link sign-in-btn" href="/video" id="landing-sign-in-btn">Pinterest video</a> -->
+                        <a class="nav-link sign-in-btn" href="/login-page" id="landing-sign-in-btn">Sign In</a>
+                        <a class="nav-link sign-out-btn" href="" style="display:none" id="landing-sign-out-btn">Sign out</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <article>
+        <div class="container-fluid">
+            <div class="jumbotron text-center">
+                <h2>What do you recommend today?</h2>
+                <p>Add anything that you recommend to Pittsburgher!</p>  
+            </div>
+        </div>
+    </article>
+    <article>
+        <div id="data-container">
+        </div>
+    </article>
+    <footer class="footer">
+      <div class="footer-style">© 2024 Pitterest Website&nbsp;
+      </div>
+    </footer>
+    <script src="pitterest.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

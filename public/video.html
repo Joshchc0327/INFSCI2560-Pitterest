@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vertical Scrolling YouTube Videos</title>
+    <style>
+        /* Page styling */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow-y: auto;
+            background-color: black;
+        }
+
+        /* Container for videos */
+        .video-container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Embedded iframe styling */
+        iframe {
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* Styling for the back button */
+        #backButton {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Video containers -->
+    <div class="video-container">
+        <iframe class="video-frame" src="https://www.youtube.com/embed/_dVjEQf68So?enablejsapi=1&autoplay=0&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+        <iframe class="video-frame" src="https://www.youtube.com/embed/ozX-tHb2pMk?enablejsapi=1&autoplay=0&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+        <iframe class="video-frame" src="https://www.youtube.com/embed/02LAx-CZ-0Q?enablejsapi=1&autoplay=0&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+        <iframe class="video-frame" src="https://www.youtube.com/embed/_dVjEQf68So?enablejsapi=1&autoplay=0&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+        <iframe class="video-frame" src="https://www.youtube.com/embed/ozX-tHb2pMk?enablejsapi=1&autoplay=0&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+        <iframe class="video-frame" src="https://www.youtube.com/embed/02LAx-CZ-0Q?enablejsapi=1&autoplay=0&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+        <iframe class="video-frame" src="https://www.youtube.com/embed/_dVjEQf68So?enablejsapi=1&autoplay=0&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+        <iframe class="video-frame" src="https://www.youtube.com/embed/ozX-tHb2pMk?enablejsapi=1&autoplay=0&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+        <iframe class="video-frame" src="https://www.youtube.com/embed/02LAx-CZ-0Q?enablejsapi=1&autoplay=0&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+        <iframe class="video-frame" src="https://www.youtube.com/embed/_dVjEQf68So?enablejsapi=1&autoplay=0&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+        <iframe class="video-frame" src="https://www.youtube.com/embed/ozX-tHb2pMk?enablejsapi=1&autoplay=0&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+        <iframe class="video-frame" src="https://www.youtube.com/embed/02LAx-CZ-0Q?enablejsapi=1&autoplay=0&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <!-- Add more video containers as needed -->
+
+    <!-- Back to Home button -->
+    <button id="backButton">Back to Home</button>
+
+    <!-- JavaScript -->
+    <script>
+        // Array to store video iframes
+        const videoFrames = document.querySelectorAll('.video-frame');
+
+        // Function to control video playback based on scroll position
+        function handleScroll() {
+            const viewportHeight = window.innerHeight;
+            videoFrames.forEach((frame, index) => {
+                const boundingRect = frame.getBoundingClientRect();
+                if (boundingRect.top < viewportHeight / 2 && boundingRect.bottom > viewportHeight / 2) {
+                    // Video frame is in the middle of the viewport
+                    playVideo(frame);
+                } else {
+                    // Pause video if it's not in the middle of the viewport
+                    pauseVideo(frame);
+                }
+            });
+        }
+
+        // Function to play video
+        function playVideo(frame) {
+            frame.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+        }
+
+        // Function to pause video
+        function pauseVideo(frame) {
+            frame.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Back button navigation
+        const backButton = document.getElementById('backButton');
+        backButton.addEventListener('click', () => {
+            window.location.href = '/';
+        });
+
+        // Load YouTube IFrame Player API script
+        const script = document.createElement('script');
+        script.src = 'https://www.youtube.com/iframe_api';
+        document.body.appendChild(script);
+    </script>
+</body>
+</html>
